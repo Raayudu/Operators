@@ -55,5 +55,23 @@ contract allOperators{
         value =(_num1%2)==0;//true
         return !value;//false
     }
+        function digitSum(int256 n) public pure returns (int256) {
+        int256 a;
+        int256 sum = 0;
+        while (n > 0) {
+            a = n % 10;
+            sum = sum + a;
+            n = n / 10;
+        }
+        return sum;
+            function average(
+        int256 a,
+        int256 b,
+        int256 c
+    ) public pure returns (int256) {
+        require(a > 0 && b > 0 && c > 0, "numbers must not be negative");
+        return (a + b + c) / 3;
+    }
+    }
 
 }
