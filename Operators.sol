@@ -23,8 +23,8 @@ contract operators{
 contract allOperators{
 
     function multiply(uint)public pure returns(uint z){
-        uint  _x;
-        uint  _y;
+        uint  _x=_value;
+        uint  _y=_value;
         z= _x*_y;//here we can use +,-,*,/,%,+=,
         return z;//arthamatic operators
     }
@@ -35,15 +35,15 @@ contract allOperators{
     }
 
        function lesse(uint)public pure returns(uint num5) {
-        uint num3;
-        uint num4;//bitwise  operators
+        uint num3=value;
+        uint num4=value;//bitwise  operators
         num5 = num3 ^ num4;
         return num5;// here we can &,|,^,<<,>>,>>>
     }
     
     function oddorEven(uint _num7) public pure returns(string memory){
         string memory value;
-        value = (_num7^2)!=0? "even" : "odd";
+        value = (_num7%2)!=0? "even" : "odd";
         return value;
     }// conditional operators
     function comp(uint _num6)public pure returns(bool){
